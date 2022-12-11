@@ -5,10 +5,10 @@ void main(List<String> args) {
    while(n!=0){
       stdout.write("Enter number : ");
       n=int.parse(stdin.readLineSync()!);
-      if(n%2==0){
+      if(n%2==0 && n>0){
         sumOfEven+=n;
       }
-      else{
+      else if(n%2!=0 && n<0){
         sumOfOdd+=n;
       }
    }
