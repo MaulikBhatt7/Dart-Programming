@@ -17,7 +17,6 @@ void main(List<String> args) {
 }
 class Friend{
   List<Map<String,Object?>> friends = [];
-  Map<String,dynamic> map = {};
   
     void getFriendDetails(){
         while(true){
@@ -27,6 +26,7 @@ class Friend{
                 int choice = int.parse(stdin.readLineSync()!);
                 switch (choice){
                 case 1: 
+                Map<String,dynamic> map = {};
                 stdout.write("Enter Name : ");
                 map['name'] = stdin.readLineSync()!;
                 stdout.write("Enter Age : ");
