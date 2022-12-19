@@ -81,9 +81,9 @@ class _MyHomePageState extends State<MyHomePage> {
         width: 500,
         height: 500,
         child: Column(
-            // horizontal alignment
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
             // vertical alignment
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            // horizontal alignment
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
