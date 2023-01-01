@@ -1,30 +1,28 @@
 import 'dart:io';
 
 void main(List<String> args) {
-  stdout.write("Enter 1st number : ");
-  int n1 = int.parse(stdin.readLineSync()!);
-
-  stdout.write("Enter 2nd number : ");
-  int n2 = int.parse(stdin.readLineSync()!);
-
-  stdout.write("Enter operator : ");
-  String op = (stdin.readLineSync()!);
-
-  switch (op){
-    case "+":
-      print("Addition = ${n1+n2}");
+  stdout.write("Enter a string : ");
+  String str = stdin.readLineSync()!;
+  List li;
+  li = str.split("");
+  int sum=int.parse(li[0]);
+  for(int i=1;i<li.length;i+=2){
+    if(li[i]=="+"){
+      sum+=int.parse(li[i+1]);
+    }
+    else if(li[i]=="-"){
+      sum-=int.parse(li[i+1]);
+    }
+    else if(li[i]=="*"){
+      sum*=int.parse(li[i+1]);
+    }
+    else if(li[i]=="/"){
+      sum~/=int.parse(li[i+1]);
+    }
+    else{
+      print("Invalid String");
       break;
-    case "-":
-      print("Substraction = ${n1-n2}");
-      break;
-    case "*":
-      print("Multiplication = ${n1*n2}");
-      break;
-    case "/":
-      print("Division = ${n1/n2}");
-      break;
-    default:
-      print("Invalid Operator");
+    }
   }
-
+  print("Answer = ${sum}");
 }
